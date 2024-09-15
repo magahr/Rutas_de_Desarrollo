@@ -80,4 +80,6 @@ asss
 
 
 Control de Cambio
-git commit -m "Fist Commit - configuration"
+1.- 15-09-2024
+    git commit -m "Fist Commit - configuration"
+    
