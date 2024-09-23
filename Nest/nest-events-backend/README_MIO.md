@@ -70,16 +70,10 @@ asss
 
 
 
-
-
-
-
-
-
-
-
-
 Control de Cambio
 1.- 15-09-2024
     git commit -m "Fist Commit - configuration"
+
+2.- "23-09-2024 Making the new proyect nest-events-
+asss"
     
