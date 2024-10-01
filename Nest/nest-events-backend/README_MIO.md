@@ -5,6 +5,10 @@ ruta:
     nest + prisma + graphql
     Typescript
 
+Al parecer voy a usar 24-09-2024:
+este curso
+   Master NestJS a Node.js Framework 2024
+
 Pasos:
 
 
@@ -37,19 +41,6 @@ control de cambio
 11-09-2024 Making the new proyect nest-events-
 asss
     
-
-
-
-
-2.- Instalar docker
-    docker.com
-
-3.- Instalar herramienta para probar APIs
-    postman.com
-    Video 68, para configuar postman.
-   
-4.- 
-
 
    npm install --global yarn
 

@@ -34,8 +34,8 @@ Pasos:
     
 
 control de cambio
-11-09-2024 Making the new proyect nest-events-
-asss
+"23-09-2024 Making the new proyect nest-events-
+asss"
     
 
 
