@@ -40,4 +40,18 @@ Pasos:
 6.- Verificar el sitio 
     localhost:3000
 
+7.- En caso que no funcione escribir:
+   
+    npm install @nestjs/common
+
+8.- Crear el archivo 
+    .editorconfig (permite manejar el mismo estandar en los editores) 
+    ruta:
+    NestPlatzi\platzi-store
+    Rutas_de_Desarrollo\NestPlatzi\platzi-store\.editorconfig
+9.-     
+
+Control de cambio
+
+git commit -m "03-10-2024 Starting - Configuration - Video 5  de 23"
 
