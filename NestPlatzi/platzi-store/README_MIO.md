@@ -55,3 +55,5 @@ Control de cambio
 
 git commit -m "03-10-2024 Starting - Configuration - Video 5  de 23"
 
+git commit -m "04-10-202 - My first commit - understanding" 
+
