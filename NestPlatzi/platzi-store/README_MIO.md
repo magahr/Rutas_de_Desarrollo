@@ -57,4 +57,4 @@ git commit -m "03-10-2024 Starting - Configuration - Video 5  de 23"
 
 git commit -m "04-10-202 - My first commit - understanding" 
 
-git commit -m "07-10-2024 - Understandig GET - with params" 
+git commit -m "07-10-2024 - Understandig GET - with params - I'm going the GET: parámetros query8 / 23 video" 
