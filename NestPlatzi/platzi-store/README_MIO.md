@@ -35,7 +35,7 @@ Pasos:
     cd platzi-store
 
 5.- Iniciar el servidor de desarrollo
-    npm run start:dev
+    npm run start:dev   (se activa el servidor y se pueden hacer modificaciones sin necesidad de reiniciar el servidor )
 
 6.- Verificar el sitio 
     localhost:3000
@@ -57,3 +57,4 @@ git commit -m "03-10-2024 Starting - Configuration - Video 5  de 23"
 
 git commit -m "04-10-202 - My first commit - understanding" 
 
+git commit -m "07-10-2024 - Understandig GET - with params" 
