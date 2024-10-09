@@ -27,6 +27,7 @@ Pasos:
     ESLint  
     Prettier 
     EditorConfig
+    Material Icon Theme
 
 3.- Crear un nuevo projecto
     nest new platzi-store
