@@ -64,7 +64,7 @@ Pasos:
 
 
 
-Control de cambio
+Control de cambio al 09/10/2024
 
 git commit -m "03-10-2024 Starting - Configuration - Video 5  de 23"
 
