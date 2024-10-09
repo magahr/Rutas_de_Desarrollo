@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const myName = 'Nicolas';
 const myAge = 12;
 const suma = (a: number, b: number) => {
