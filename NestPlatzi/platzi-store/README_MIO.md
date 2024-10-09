@@ -49,7 +49,20 @@ Pasos:
     ruta:
     NestPlatzi\platzi-store
     Rutas_de_Desarrollo\NestPlatzi\platzi-store\.editorconfig
-9.-     
+
+9.-  Creacion de controladores desde la consola
+
+      nest g cor controllers/categories --flat
+      src/controllers/categories.controller.ts (aqui es donde queda)
+
+10.- 
+
+
+
+
+
+
+
 
 Control de cambio
 
