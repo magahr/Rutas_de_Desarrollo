@@ -56,7 +56,10 @@ Pasos:
       nest g cor controllers/categories --flat
       src/controllers/categories.controller.ts (aqui es donde queda)
 
-10.- 
+10.- Instalacion de insomnia
+     
+     Descargar Insomnia
+     
 
 
 
@@ -75,6 +78,7 @@ git commit -m "07-10-2024 - Understandig GET - with params - I'm going the GET: 
 
 git commit -m "09-10-2024 - Updating news products and catergories that make with the console  9 / 23 video" 
 
-what happend
+i have to repeat
+
 
 
