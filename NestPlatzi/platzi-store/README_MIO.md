@@ -27,6 +27,7 @@ Pasos:
     ESLint  
     Prettier 
     EditorConfig
+    Material Icon Theme
 
 3.- Crear un nuevo projecto
     nest new platzi-store
@@ -49,12 +50,31 @@ Pasos:
     ruta:
     NestPlatzi\platzi-store
     Rutas_de_Desarrollo\NestPlatzi\platzi-store\.editorconfig
-9.-     
 
-Control de cambio
+9.-  Creacion de controladores desde la consola
+
+      nest g cor controllers/categories --flat
+      src/controllers/categories.controller.ts (aqui es donde queda)
+
+10.- 
+
+
+
+
+
+
+
+
+Control de cambio al 09/10/2024
 
 git commit -m "03-10-2024 Starting - Configuration - Video 5  de 23"
 
 git commit -m "04-10-202 - My first commit - understanding" 
 
 git commit -m "07-10-2024 - Understandig GET - with params - I'm going the GET: parámetros query8 / 23 video" 
+
+git commit -m "09-10-2024 - Updating news products and catergories that make with the console  9 / 23 video" 
+
+what happend
+
+

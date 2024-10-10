@@ -1,10 +1,14 @@
 /* eslint-disable prettier/prettier */
+<<<<<<< HEAD
 import { Controller, Get, Param } from '@nestjs/common';
+=======
+import { Controller, Get, Param, Query} from '@nestjs/common';
+>>>>>>> 4d41446a14746d9ba88a770e5383bd9911a2ea49
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
   @Get()
   getHello(): string {
@@ -18,6 +22,7 @@ export class AppController {
   hello() {
     return 'con slas';
   }
+<<<<<<< HEAD
   // primera forma de envio del get
   @Get('products/:productId')
   getProducts(@Param() params: any) {
@@ -33,4 +38,13 @@ export class AppController {
   getCategory(@Param('productId') productId: string, @Param('id') id: string) {
     return `product ${productId} and categoria ${id}`;
   }
+=======
+  
+
+
+
+
+
+
+>>>>>>> 4d41446a14746d9ba88a770e5383bd9911a2ea49
 }
