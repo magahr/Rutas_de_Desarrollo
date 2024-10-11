@@ -53,13 +53,14 @@ Pasos:
 
 9.-  Creacion de controladores desde la consola
 
-      nest g cor controllers/categories --flat
-      src/controllers/categories.controller.ts (aqui es donde queda)
+      nest g controller controllers/categories --flat
+      (si quiero que creee la carpeta categories le quito el flat)
+      (src/controllers/categories.controller.ts - aqui es donde queda)
 
 10.- Instalacion de insomnia
      
      Descargar Insomnia
-     
+
 
 
 
@@ -77,6 +78,8 @@ git commit -m "04-10-202 - My first commit - understanding"
 git commit -m "07-10-2024 - Understandig GET - with params - I'm going the GET: parámetros query8 / 23 video" 
 
 git commit -m "09-10-2024 - Updating news products and catergories that make with the console  9 / 23 video" 
+
+git commit -m "11-10-2024 - Creating news controlers order, user, customer and brand i have to make with the console - 9 / 23 video" 
 
 i have to repeat
 
