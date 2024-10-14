@@ -1,6 +1,6 @@
 npm run start
 
-
+git commit -m "14-10-2024 my first commit" 
 estensiones:
 ES7 React/Redux/GraphQL/Rea
 
@@ -9,6 +9,7 @@ ES7 React/Redux/GraphQL/Rea
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
 
 In the project directory, you can run:
 
