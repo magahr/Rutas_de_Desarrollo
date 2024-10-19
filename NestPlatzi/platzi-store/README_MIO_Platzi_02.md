@@ -2,6 +2,12 @@
 Aprendizaje Ruta Desarrollo Fospuca
 ruta:
     Curso de Backend con NestJS
+
+
+ruta en casa:
+
+    C:\Users\Magahr\Documents\cursos\Udemy-Principal
+        C:\Users\Magahr\Documents\cursos\Udemy-Principal\Rutas_de_Desarrollo\NestPlatzi\platzi-store
    
 Pasos:
 
