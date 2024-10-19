@@ -1,5 +1,7 @@
 # Rutas_de_Desarrollo
 
+
+
 1.- Instalación de React
     Buscar instalacion npx-create, luego crear una nueva aplicion en React
     https://es.legacy.reactjs.org/docs/create-a-new-react-app.html
