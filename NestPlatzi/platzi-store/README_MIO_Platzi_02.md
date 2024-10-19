@@ -15,8 +15,12 @@ Pasos:
    node-v20.17.0-x64.msi
    salir de visual code y volver a entrar 
 
+
+
 1.- Instalar Nest
     npm install -g @nestjs/cli
+
+    npm install  (en caso de cambiar de directorio o de dispositivo)
 
    verificar que este en 
     npm list -g --depth=0 (ver si  esta @nestjs/cli  )
