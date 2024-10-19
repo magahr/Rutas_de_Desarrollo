@@ -31,7 +31,7 @@ Pasos:
 4.- Entrar a la carpeta del proyecto
     cd platzi-store
 
-5.- Iniciar el servidor de desarrollo
+5.- Iniciar el servidor de desarrollo o cuando se baja el repositorio a otra instalacion
     npm run start:dev
 
 6.- Verificar el sitio 
