@@ -8,14 +8,4 @@ export class CategoriesController {
     return `product ${productId} and categoria ${id}`;
 
   };
-
-
-
-
-
-
-
-
-
-
-}
+ }
