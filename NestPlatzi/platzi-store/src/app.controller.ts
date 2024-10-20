@@ -8,7 +8,7 @@ export class AppController {
 
     @Get()
     getHello(): string {
-      return 'Hola Mundo';
+      return 'Hola Mundito estoy en NestPlatzi';
     }
     @Get('nuevo')
     newEndpoint() {
