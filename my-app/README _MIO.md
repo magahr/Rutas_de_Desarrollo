@@ -12,6 +12,10 @@
     cd my-app
     npm start
 
+    si da error hacer:
+
+         npm run build
+
     Esto crea una estructura inicar del proyecto.
 
 2.- Inicar el servidor
