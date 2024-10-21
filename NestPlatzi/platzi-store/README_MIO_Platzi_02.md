@@ -8,6 +8,10 @@ ruta en casa:
 
     C:\Users\Magahr\Documents\cursos\Udemy-Principal
         C:\Users\Magahr\Documents\cursos\Udemy-Principal\Rutas_de_Desarrollo\NestPlatzi\platzi-store
+
+ruta en trabajo:
+    C:\Users\mhernandez.FOSPUCA\Documents\cursos\Udemy-Principal
+         C:\Users\mhernandez.FOSPUCA\Documents\cursos\Udemy-Principal\Rutas_de_Desarrollo\NestPlatzi\platzi-store
    
 Pasos:
 
@@ -20,7 +24,7 @@ Pasos:
 1.- Instalar Nest
     npm install -g @nestjs/cli
 
-    npm install  (en caso de cambiar de directorio o de dispositivo)
+    npm install  (en caso de cambiar de directorio o de dispositivo y debes hacerlo desde la carpeta del proyecto, en este caso platzi-store)
 
    verificar que este en 
     npm list -g --depth=0 (ver si  esta @nestjs/cli  )
@@ -45,13 +49,28 @@ Pasos:
     npm run start:dev
 
 6.- Verificar el sitio 
-    localhost:3000
+    localhost:3001
+
+    Para que esta ocupado en ese pueto:
+    netstat -ano | findstr :3001
+
+    Para cambirlo:
+      netstat -ano | findstr :3000
+
+      se hace en:
+        main.ts en la carpeta src
 
 
 control de cambio
 11-09-2024 Making the new proyect nest-events-
 asss
 git commit - m "02-10-2024 Updating the repo"
+git commit -m "25-10-2024 Changing the repo to another farder in fospuca"
+
+
+
+
+
 
 ..
   
