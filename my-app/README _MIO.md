@@ -1,7 +1,14 @@
 # Rutas_de_Desarrollo
 
+  Rutas en fospuca:
+      C:\Users\mhernandez.FOSPUCA\Documents\cursos\Udemy-Principal\Rutas_de_Desarrollo
 
+          C:\Users\mhernandez.FOSPUCA\Documents\cursos\Udemy-Principal\Rutas_de_Desarrollo\my-app
 
+          
+  Rutas en Casa:
+      
+     
 1.- Instalación de React
     Buscar instalacion npx-create, luego crear una nueva aplicion en React
     https://es.legacy.reactjs.org/docs/create-a-new-react-app.html
@@ -10,15 +17,19 @@
 
     Desde una terminal hacer:
    
-    npx create-react-app my-app
-    cd my-app
-    npm start
+       npx create-react-app my-app
+       cd my-app
+       npm start
 
     si da error hacer:
 
-         npm run build
+       npm run build
 
     Esto crea una estructura inicar del proyecto.
+
+    1.1.- Si se está haciendo un cambio de directorio o de pc hacer lo siguiente:
+         
+        npm install
 
 2.- Inicar el servidor
     npm run start
@@ -49,3 +60,4 @@ Control de cambio:
 
 git commit -m "21-10-2024 I saw the video until 0:22:14"
 git commit -m "22-10-2024 I saw the video, Clase 38, until 0:26:50"
+git commit -m "22-10-2024 I saw the video, Clase 38 all. Now I have to wacht the 39 video"

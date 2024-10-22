@@ -8,9 +8,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <h1>Hola estoy en la pagina index.js. LLAMÉ AL compotente App </h1>
+    <h1>Hola estoy en la pagina index.js. Esto es despues de llamar al componente App </h1>
     <Saludo />
-    <h1>Hola estoy en la pagina index.js. LLAMÉ AL compotente SALUDOS </h1>
+    <h1>Hola estoy en la pagina index.js. Esto es despues de llamar al componente SALUDOS </h1>
   </React.StrictMode>
 );
 
