@@ -48,3 +48,4 @@ estensiones:
 Control de cambio:
 
 git commit -m "21-10-2024 I saw the video until 0:22:14"
+git commit -m "22-10-2024 I saw the video, Clase 38, until 0:26:50"
