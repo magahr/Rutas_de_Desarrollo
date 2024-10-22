@@ -6,8 +6,10 @@
     Buscar instalacion npx-create, luego crear una nueva aplicion en React
     https://es.legacy.reactjs.org/docs/create-a-new-react-app.html
 
-    Desde una terminal hacer:
+    1.- Aqui no existe el proyecto ni tampoco se tiene react
 
+    Desde una terminal hacer:
+   
     npx create-react-app my-app
     cd my-app
     npm start
@@ -43,3 +45,6 @@
 git commit -m "14-10-2024 my first commit" 
 estensiones:
 
+Control de cambio:
+
+git commit -m "21-10-2024 I saw the video until 0:22:14"
