@@ -61,3 +61,6 @@ Control de cambio:
 git commit -m "21-10-2024 I saw the video until 0:22:14"
 git commit -m "22-10-2024 I saw the video, Clase 38, until 0:26:50"
 git commit -m "22-10-2024 I saw the video, Clase 38 all. Now I have to wacht the 39 video"
+
+git commit -m "23-10-2024 I waching the video Clase 39 1:04"
+
