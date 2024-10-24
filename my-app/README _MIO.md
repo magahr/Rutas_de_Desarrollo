@@ -63,4 +63,5 @@ git commit -m "22-10-2024 I saw the video, Clase 38, until 0:26:50"
 git commit -m "22-10-2024 I saw the video, Clase 38 all. Now I have to wacht the 39 video"
 
 git commit -m "23-10-2024 I waching the video Clase 39 1:04"
+git commit -m "24-10-2024 I wached the all video Clase 39, but this have something warning"
 
