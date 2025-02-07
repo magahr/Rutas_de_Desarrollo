@@ -65,9 +65,5 @@ git commit - m "02-10-2024 Updating the repo"
 
 
 Control de Cambio
-1.- 15-09-2024
-    git commit -m "Fist Commit - configuration"
+1.- git commit -m "Updating  - 07/02/2025"
 
-2.- "23-09-2024 Making the new proyect nest-events-
-asss"
-    
