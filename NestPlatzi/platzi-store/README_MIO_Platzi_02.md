@@ -66,6 +66,7 @@ control de cambio
 asss
 git commit - m "02-10-2024 Updating the repo"
 git commit -m "25-10-2024 Changing the repo to another farder in fospuca"
+git commit -m "10-02-2025 Changing the repo to another farder in fospuca"
 
 
 
