@@ -1,5 +1,5 @@
 
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -18,25 +18,6 @@ export class AppController {
   hello() {
     return 'con slas';
   }
-  // primera forma de envio del get
-  @Get('products/:productId')
-  getProducts(@Param() params: any) {
-    return `producto ${params.productId}`;
-  }
-  // segunda forma de envio del get
-  @Get('productss/:productId')
-  getProductss(@Param('productId') productId: string) {
-    return `producto ${productId}`;
-  }
-  // Buscar en una categoria especifica un producto especifico
-  @Get('categories/:id/products/:productId')
-  getCategory(@Param('productId') productId: string, @Param('id') id: string) {
-    return `product ${productId} and categoria ${id}`;
-  }
- // usos del decorador query
- @Get('productsss')
- getProductsss(@Query('limit') limit: number, @Query('offset') offset: number) {
-    return `productsss: limit => ${limit} offset=> ${offset}`;
- }
+
 
 }

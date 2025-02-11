@@ -60,7 +60,10 @@ Pasos:
       se hace en:
         main.ts en la carpeta src
 
-
+7.- Creacion de un controlador
+    
+    nest g controller controllers/products
+    nnest g controller controllers/products --flat (si no quiero que cree una carpeta por tipo de controlador)
 control de cambio
 11-09-2024 Making the new proyect nest-events-
 asss
