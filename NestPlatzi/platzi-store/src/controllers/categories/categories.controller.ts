@@ -9,5 +9,4 @@ getCategory(@Param('productId') productId: string, @Param('id') id: string) {
   return `product ${productId} and categoria ${id}`;
 }
 
-
 }
