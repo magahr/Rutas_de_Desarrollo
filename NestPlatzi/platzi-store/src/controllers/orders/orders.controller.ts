@@ -6,12 +6,12 @@ export class OrdersController {
 // primera forma de envio del get
 @Get('orders/:orderId')
 getorders(@Param() params: any) {
-  return `order ${params.orderId}`;
+  return `order estoy en el getorders ${params.orderId}`;
 }
 // segunda forma de envio del get
-@Get('orders/:orderId')
+@Get('orderss/:orderId')
 getorderss(@Param('orderId') orderId: string) {
-  return `ordero ${orderId}`;
+  return `ordero estoy getorderss ${orderId}`;
 }
 
 // usos del decorador query
@@ -19,9 +19,9 @@ getorderss(@Param('orderId') orderId: string) {
 getorders02(
   @Query('limit') limit = 100,
   @Query('offset') offset = 0,
-  @Query('brand') brand: string,
+  @Query('order') order: string,
 ) {
-  return `orders: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
+  return `orders: limit => ${limit} offset=> ${offset} order=> ${order}`;
 }
 
 

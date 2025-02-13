@@ -63,7 +63,7 @@ Pasos:
 7.- Creacion de un controlador
     
     nest g controller controllers/products
-    nnest g controller controllers/products --flat (si no quiero que cree una carpeta por tipo de controlador)
+    nest g controller controllers/products --flat (si no quiero que cree una carpeta por tipo de controlador)
 control de cambio
 11-09-2024 Making the new proyect nest-events-
 asss
@@ -72,6 +72,7 @@ git commit -m "25-10-2024 Changing the repo to another farder in fospuca"
 git commit -m "10-02-2025 Changing the repo to another farder in fospuca"
 git commit -m "11-02-2025 Changing the repo to another farder in fospuca, course 9/23"
 git commit -m "12-02-2025 I making the others controllers, first order, course 9/23"
+git commit -m "13-02-2025 I making the others controllers, first customer, brand, user, course 9/23"
 
 
 
