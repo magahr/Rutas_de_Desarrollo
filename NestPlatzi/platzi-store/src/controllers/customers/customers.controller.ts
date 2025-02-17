@@ -1,4 +1,4 @@
-import { Controller, Param, Query, Get } from '@nestjs/common';
+import { Controller, Param, Query, Get, Post, Body } from '@nestjs/common';
 
 
 @Controller('customers')
@@ -24,5 +24,21 @@ getcustomers02(
 ) {
   return `customers: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
 }
+
+
+@Post('customers')
+create(@Body() payload: any) {
+
+  return {
+        message: 'accion de crear en el customers',
+        payload
+  }
+}
+
+
+
+
+
+
 
 }
