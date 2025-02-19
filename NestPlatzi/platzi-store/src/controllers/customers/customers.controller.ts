@@ -1,4 +1,4 @@
-import { Controller, Param, Query, Get, Post, Body } from '@nestjs/common';
+import { Controller, Param, Query, Get, Post, Body, Delete, Put } from '@nestjs/common';
 
 
 @Controller('customers')
@@ -20,9 +20,9 @@ getcustomerss(@Param('customerId') customerId: string) {
 getcustomers02(
   @Query('limit') limit = 100,
   @Query('offset') offset = 0,
-  @Query('brand') brand: string,
+  @Query('customer') customer: string,
 ) {
-  return `customers: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
+  return `customers: limit => ${limit} offset=> ${offset} customer=> ${customer}`;
 }
 
 
@@ -36,6 +36,26 @@ create(@Body() payload: any) {
 }
 
 
+@Put('customers/:customerId')
+update(@Param('customerId') customerId: number, @Body() payload: any) {
+
+  return {
+        customerId,
+        message: 'accion de modificación, en el modulo customer',
+        payload
+  }
+}
+
+@Delete('customers/:customerId')
+Delete(@Param('customerId') customerId: number) {
+
+  return {
+        customerId,
+        message: 'accion de borrado, en el modulo customer'
+
+  }
+
+}
 
 
 

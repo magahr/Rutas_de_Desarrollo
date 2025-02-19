@@ -1,4 +1,4 @@
-import { Controller, Get, Query, Param } from '@nestjs/common';
+import { Controller, Get, Query, Param, Put, Delete, Body } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
@@ -24,6 +24,26 @@ getusers02(
   return `users: limit => ${limit} offset=> ${offset} user=> ${user}`;
 }
 
+@Put('users/:userId')
+update(@Param('userId') userId: number, @Body() payload: any) {
+
+  return {
+        userId,
+        message: 'accion de modificación, en el modulo user',
+        payload
+  }
+}
+
+@Delete('userS/:userId')
+Delete(@Param('userId') userId: number) {
+
+  return {
+        userId,
+        message: 'accion de borrado, en el modulo user'
+
+  }
+
+}
 
 
 
