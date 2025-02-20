@@ -1,17 +1,25 @@
-import { Controller, Get, Query, Param, Post, Body, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Query, Param, Post, Body, Put, Delete, HttpStatus, HttpCode, Res, } from '@nestjs/common';
+import { response, Response } from 'express';
 
 @Controller('products')
 export class ProductsController {
 
 // primera forma de envio del get
 @Get('products/:productId')
-getProducts(@Param() params: any) {
-  return `producto ${params.productId}`;
+@HttpCode(HttpStatus.ACCEPTED)
+getProducts(@Res() respnse: Response, @Param('productId') productId: string) {
+  response.status(200).send(
+     {
+         message: `product ${productId}`,
+     });
 }
 // segunda forma de envio del get
-@Get('products/:productId')
+@Get('productss/:productId')
 getProductss(@Param('productId') productId: string) {
-  return `producto ${productId}`;
+  return {
+      message: `product ${productId}`
+
+  };
 }
 
 // usos del decorador query
