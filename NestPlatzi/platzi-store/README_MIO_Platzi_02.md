@@ -64,6 +64,12 @@ Pasos:
     
     nest g controller controllers/products
     nest g controller controllers/products --flat (si no quiero que cree una carpeta por tipo de controlador)
+
+8.- Creación de un servicio
+    
+    nest g s services/products 
+    (nest g s services/products --flat (para no crear la subcarpeta) )
+
 control de cambio
 11-09-2024 Making the new proyect nest-events-
 asss
@@ -78,6 +84,8 @@ git commit -m "14-02-2025 Using Imsomia, post course 11/23"
 git commit -m "17-02-2025 Using Imsomia, post course 12/23 in the middle"
 git commit -m "19-02-2025 Using Imsomia, put, delete course 12/23 in the middle"
 git commit -m "20-02-2025 Using status code"
+
+git commit -m "24-02-2025 Understanding service"
 
 
 
