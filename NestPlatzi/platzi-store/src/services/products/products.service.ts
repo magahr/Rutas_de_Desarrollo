@@ -42,6 +42,15 @@ export class ProductsService {
       return deletedProduct;
     }
     update(id: number, payload: any) {
+         const product = this.findOne(id);
+         if (product) {
+            const index = this.products.findIndex((item) => item.id === id);
+            this.products[index] =payload;
+            return this.products[index];
+         }
+         return null;
+
+      /* Generado con la DeepSeek
       const index = this.products.findIndex(product => product.id === id);
 
       if (index === -1) {
@@ -56,6 +65,8 @@ export class ProductsService {
 
       this.products[index] = updatedProduct;
       return updatedProduct;
+      */
+
     }
 
 }
