@@ -10,7 +10,7 @@ export class ProductsController {
 // primera forma de envio del get
 @Get('products/:productId')
 @HttpCode(HttpStatus.ACCEPTED)
-getProducts(@Res() respnse: Response, @Param('productId') productId: string) {
+getProducts(@Param('productId') productId: string) {
   //response.status(200).send(
   //   {
   //       message: `product ${productId}`,
