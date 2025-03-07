@@ -18,7 +18,13 @@ export class ProductsService {
     }
 
     findOne(id: number) {
-        return this.products.find((item) => item.id === id);
+      const product = this.products.find((item) => item.id === id);
+
+      if (!product) {
+        throw new NotFoundException(`Producto con ID ${id} no encontrado`);
+      }
+
+      return product;
     }
 
     create(payload: any) {
