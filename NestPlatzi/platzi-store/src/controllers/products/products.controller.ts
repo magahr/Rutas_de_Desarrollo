@@ -1,5 +1,5 @@
 import { Controller, Get, Query, Param, Post, Body, Put, Delete, HttpStatus, HttpCode, Res, } from '@nestjs/common';
-import { response, Response } from 'express';
+import {  } from 'express';
 
 import { ProductsService} from './../../services/products/products.service'
 @Controller('products')
@@ -56,15 +56,8 @@ update(@Param('id') id: string, @Body() payload: any) {
 }
 
 @Delete('products/:id')
-Delete(@Param('id') id: number) {
+Delete(@Param('id') id: string) {
 
-  return id;
-}
-
-
-
-
-
-
-
+  return 'Producto eliminado ' + this.productsService.delete(+id);
+ }
 }

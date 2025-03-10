@@ -89,6 +89,8 @@ git commit -m "24-02-2025 Understanding service"
 git commit -m "26-02-2025 Building a product service"
 git commit -m "05-03-2025 Building a product service"
 git commit -m "06-03-2025 Testing a product service"
+git commit -m "07-03-2025 Testing a product service- Clase 16 de 23 - Manejo de errores con throw y NotFoundException"
+git commit -m "10-03-2025 Testing a product service- Clase 17 de 23 - Starting class 17"
 
 
 
