@@ -1,6 +1,18 @@
-import { Controller, Get, Query, Param, Post, Body, Put, Delete, HttpStatus, HttpCode, Res, ParseIntPipe } from '@nestjs/common';
+import { Controller,
+         Get,
+         Query,
+         Param,
+         Post,
+         Body,
+         Put,
+         Delete,
+         HttpStatus,
+         HttpCode,
+         Res,
+         //ParseIntPipe
+         } from '@nestjs/common';
 import {  } from 'express';
-
+import { ParseIntPipe} from './../../common/parse-int/parse-int.pipe';
 import { ProductsService} from './../../services/products/products.service'
 @Controller('products')
 export class ProductsController {
