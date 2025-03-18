@@ -96,6 +96,9 @@ git commit -m "12-03-2025 Creating your on pipe- Clase 18 de 23 - Starting class
 git commit -m "13-03-2025 Finiching creating your on pipe and startin Creating your DTO"
 git commit -m "14-03-2025 Finiching Creating your DTO"
 git commit -m "17-03-2025 Starting - 20 - Validation paranmetes "
+git commit -m "18-03-2025 Studing class 20 - Starting - Class 21 - how we can not make wrong parameters "
+
+
 
 
 
