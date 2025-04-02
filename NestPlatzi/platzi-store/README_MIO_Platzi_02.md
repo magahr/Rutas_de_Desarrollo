@@ -102,6 +102,7 @@ git commit -m "21/03/2025 Creating the others components"
 git commit -m "26/03/2025 Creating the others components"
 git commit -m "31/03/2025 Creating categories entity"
 git commit -m "01/04/2025 Creating customer entity"
+git commit -m "02/04/2025 Creating user service"
 
 
 
