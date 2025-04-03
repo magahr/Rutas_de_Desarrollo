@@ -1,4 +1,13 @@
-import { Controller, Param, Query, Get, Post, Body, Put, Delete} from '@nestjs/common';
+import { Controller,
+  Param,
+  Query,
+  Get,
+  Post,
+  Body,
+  Put,
+  Delete,
+  ParseIntPipe,
+} from '@nestjs/common';
 
 @Controller('brands')
 export class BrandsController {
@@ -9,8 +18,8 @@ getbrands(@Param() params: any) {
   return `brand estoy en el getbrands ${params.brandId}`;
 }
 // segunda forma de envio del get
-@Get('brandss/:brandId')
-getbrandss(@Param('brandId') brandId: string) {
+@Get('brands/:brandId')
+getbrandss(@Param('brandId', ParseIntPipe) brandId: string) {
   return `brando estoy getbrandss ${brandId}`;
 }
 
