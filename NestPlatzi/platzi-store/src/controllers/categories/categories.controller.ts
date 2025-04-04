@@ -1,5 +1,11 @@
-import { Controller, Get, Param, Post, Body, Delete,  Put } from '@nestjs/common';
-import { } 
+import { Controller,
+  Get,
+  Param,
+  Post,
+  Body,
+  Delete,
+  Put } from '@nestjs/common';
+
 @Controller('categories')
 export class CategoriesController {
 

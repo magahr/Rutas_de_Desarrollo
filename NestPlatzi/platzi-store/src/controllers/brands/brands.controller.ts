@@ -19,7 +19,7 @@ getbrands(@Param() params: any) {
 }
 // segunda forma de envio del get
 @Get('brands/:brandId')
-getbrandss(@Param('brandId', ParseIntPipe) brandId: string) {
+getbrandss(@Param('brandId', ParseIntPipe) brandId: number) {
   return `brando estoy getbrandss ${brandId}`;
 }
 
