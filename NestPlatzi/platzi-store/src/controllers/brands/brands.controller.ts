@@ -6,21 +6,24 @@ import { Controller,
   Body,
   Put,
   Delete,
-  ParseIntPipe,
+  /*ParseIntPipe, este es el propio de nest*/
 } from '@nestjs/common';
 
+import { CreateBrandDto } from 'src/dtos/brands.dtos';
+/*este es el que cree en common parse-int*/
+import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 @Controller('brands')
 export class BrandsController {
 
 // primera forma de envio del get
-@Get('brands/:brandId')
+/*@Get('brands/:brandId')
 getbrands(@Param() params: any) {
   return `brand estoy en el getbrands ${params.brandId}`;
-}
+}*/
 // segunda forma de envio del get
 @Get('brands/:brandId')
 getbrandss(@Param('brandId', ParseIntPipe) brandId: number) {
-  return `brando estoy getbrandss ${brandId}`;
+  return `Estoy en get brands brandid usando ParseIntPipe creado por el programador${brandId}`;
 }
 
 // usos del decorador query
@@ -33,7 +36,7 @@ getbrands02(
   return `brands: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
 }
 @Post('brands')
-create(@Body() payload: any) {
+create(@Body() payload: CreateBrandDto) {
 
   return {
         message: 'accion de crear en el Brand',

@@ -8,7 +8,7 @@ export class ParseIntPipe implements PipeTransform {
   transform(value: string, metadata: ArgumentMetadata) {
     const val = parseInt(value, 10);
     if (isNaN(val)) {
-      throw new BadRequestException('${value} is not a number, be carefull')
+      throw new BadRequestException('${value} is not a number, be carefull (message sending by ParseIntPipe)')
     }
     return val;
   }

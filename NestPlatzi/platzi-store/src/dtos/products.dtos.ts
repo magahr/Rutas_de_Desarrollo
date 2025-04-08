@@ -12,6 +12,7 @@ export class CreateProductDto {
   @IsNumber()
   @IsNotEmpty()
   @IsPositive()
+  @IsNegative()
   readonly price: number;
   @IsNumber()
   @IsNotEmpty()
