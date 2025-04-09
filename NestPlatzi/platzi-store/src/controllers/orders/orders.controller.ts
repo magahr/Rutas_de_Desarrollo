@@ -1,5 +1,14 @@
-import { Controller, Param, Query, Get, Post, Body } from '@nestjs/common';
-
+import { Controller,
+          Param,
+          Query,
+          Get,
+          Post,
+          Body,
+          //ParseIntPipe este no va porque es el que viene con nest
+          }
+from '@nestjs/common';
+/**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
+import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 @Controller('orders')
 export class OrdersController {
 

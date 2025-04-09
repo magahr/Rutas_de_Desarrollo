@@ -9,9 +9,16 @@ import { Controller,
   /*ParseIntPipe, este es el propio de nest*/
 } from '@nestjs/common';
 
-import { CreateBrandDto } from 'src/dtos/brands.dtos';
-/*este es el que cree en common parse-int*/
+/* 1.- Servicio */
+import { BrandsService } from 'src/services/brands/brands.service';
+
+
+/**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
+
+
+
+import { CreateBrandDto } from 'src/dtos/brands.dtos';
 @Controller('brands')
 export class BrandsController {
 

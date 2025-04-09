@@ -1,4 +1,14 @@
-import { Controller, Get, Query, Param, Put, Delete, Body } from '@nestjs/common';
+import { Controller,
+         Get,
+         Query,
+         Param,
+         Put,
+         Delete,
+         Body } from '@nestjs/common';
+
+/**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
+import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
+
 
 @Controller('users')
 export class UsersController {

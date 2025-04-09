@@ -6,6 +6,8 @@ import { Controller,
   Delete,
   Put } from '@nestjs/common';
 
+/**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
+import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 @Controller('categories')
 export class CategoriesController {
 
