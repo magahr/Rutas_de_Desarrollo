@@ -6,31 +6,33 @@ import { Controller,
   Body,
   Put,
   Delete,
+  HttpStatus,
+  HttpCode,
   /*ParseIntPipe, este es el propio de nest*/
 } from '@nestjs/common';
-
-/* 1.- Servicio */
-import { BrandsService } from 'src/services/brands/brands.service';
-
-
+/* 1.- ParseIntPipe (esto se coloca en el servidico y en el controlador*/
 /**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
+/* 2.- Entity (esto se coloca en el servicio)*/
+/* 3.- DTOs (esto se coloca en el controlador y en el servicio)*/
+import { CreateBrandDto, UpdateBrandDto } from 'src/dtos/brands.dtos';
+/* 4.- Controler */
+/* 5.- Servicio */
+import { BrandsService } from 'src/services/brands/brands.service';
 
-
-
-import { CreateBrandDto } from 'src/dtos/brands.dtos';
 @Controller('brands')
 export class BrandsController {
 
-// primera forma de envio del get
-/*@Get('brands/:brandId')
-getbrands(@Param() params: any) {
-  return `brand estoy en el getbrands ${params.brandId}`;
-}*/
+   constructor(private brandservidce: BrandsService) {
+    }
 // segunda forma de envio del get
 @Get('brands/:brandId')
+@HttpCode(HttpStatus.ACCEPTED)
 getbrandss(@Param('brandId', ParseIntPipe) brandId: number) {
-  return `Estoy en get brands brandid usando ParseIntPipe creado por el programador${brandId}`;
+  //return {
+  //    message: `brand ${brandId}`
+  //};
+  return this.brandservidce.findOne(brandId);
 }
 
 // usos del decorador query
@@ -40,32 +42,39 @@ getbrands02(
   @Query('offset') offset = 0,
   @Query('brand') brand: string,
 ) {
-  return `brands: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
+  //return `brands: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
+   return this.brandservidce.findAll();
+
 }
 @Post('brands')
 create(@Body() payload: CreateBrandDto) {
 
-  return {
-        message: 'accion de crear en el Brand',
-        payload
-  }
+  //return {
+  //      message: 'accion de crear en el Brand',
+  //      payload
+  //}
+  return this.brandservidce.create(payload);
 }
 
 @Put('brands/:brandId')
-update(@Param('brandId') brandId: number, @Body() payload: any) {
+update(@Param('brandId') brandId: number, @Body() payload: UpdateBrandDto) {
 
-  return {
-        brandId,
-        message: 'accion de modificación, en el modulo brand',
-        payload
+  //return {
+  //      brandId,
+  //      message: 'accion de modificación, en el modulo brand',
+  //      payload
+  return this.brandservidce.update(+id, payload)
+
+
+
   }
 }
 
 @Delete('brands/:brandId')
-Delete(@Param('brandId') brandId: number) {
+Delete(@Param('id') id: number) {
 
   return {
-        brandId,
+        id,
         message: 'accion de borrado, en el modulo brand'
 
   }

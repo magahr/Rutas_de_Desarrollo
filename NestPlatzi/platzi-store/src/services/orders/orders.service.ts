@@ -1,11 +1,10 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Order } from '../../entities/order.entity'
-import { Product} from '../../entities/product.entity';
-import { CreateProductDto, UpdateProductDto} from './../../dtos/products.dtos';
-
+import { CreateOrderDto, UpdateOrderDto } from 'src/dtos/orders.dtos';
 @Injectable()
 export class OrdersService {
-private orders: Order[] = [
+  private counterId = 1;
+  private orders: Order[] = [
     { id: 1,
       name: 'Order 1',
       description: 'Order 1'
@@ -22,39 +21,39 @@ private orders: Order[] = [
         throw new NotFoundException(`Producto con ID ${id} no encontrado`);
       }
 
-      return product;
+      return order;
     }
 
-    create(payload: CreateProductDto) {
-        console.log("este es un condosle ", payload)
+    create(payload: CreateOrderDto) {
+        console.log("este es un console ", payload)
         this.counterId = this.counterId + 1;
-        const newProduct = {
+        const newOrder = {
             id: this.counterId,
             ...payload,
         };
-        this.products.push(newProduct);
-        return newProduct;
+        this.orders.push(newOrder);
+        return newOrder;
     }
 
     delete(id: number) {
-      const index = this.products.findIndex(product => product.id === id);
+      const index = this.orders.findIndex(product => product.id === id);
 
       if (index === -1) {
         throw new NotFoundException(`Producto con ID ${id} no encontrado`);
       }
 
-      const deletedProduct = this.products.splice(index, 1)[0];
+      const deletedProduct = this.orders.splice(index, 1)[0];
       return deletedProduct;
     }
-    update(id: number, payload: UpdateProductDto) {
+    update(id: number, payload: UpdateOrderDto) {
          const product = this.findOne(id);
          if (product) {
-            const index = this.products.findIndex((item) => item.id === id);
-            this.products[index] ={
+            const index = this.orders.findIndex((item) => item.id === id);
+            this.orders[index] ={
                 ...product,
                 ...payload,
             };
-            return this.products[index];
+            return this.orders[index];
          }
          return null;
 

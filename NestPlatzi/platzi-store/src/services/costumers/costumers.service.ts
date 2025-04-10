@@ -15,13 +15,13 @@ export class CustomersService {
       }
 
       findOne(id: number) {
-        const Customer = this.costumers.find((item) => item.id === id);
+        const customer = this.costumers.find((item) => item.id === id);
 
-        if (!Customer) {
+        if (!customer) {
           throw new NotFoundException(`customer con ID ${id} no encontrado`);
         }
 
-        return Customer;
+        return customer;
       }
 
       create(payload: CreateCustomerDto) {
