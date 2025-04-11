@@ -23,7 +23,7 @@ import { BrandsService } from 'src/services/brands/brands.service';
 @Controller('brands')
 export class BrandsController {
 
-   constructor(private brandservidce: BrandsService) {
+   constructor(private brandService: BrandsService) {
     }
 // segunda forma de envio del get
 @Get('brands/:brandId')
@@ -32,7 +32,7 @@ getbrandss(@Param('brandId', ParseIntPipe) brandId: number) {
   //return {
   //    message: `brand ${brandId}`
   //};
-  return this.brandservidce.findOne(brandId);
+  return this.brandService.findOne(brandId);
 }
 
 // usos del decorador query
@@ -43,7 +43,7 @@ getbrands02(
   @Query('brand') brand: string,
 ) {
   //return `brands: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
-   return this.brandservidce.findAll();
+   return this.brandService.findAll();
 
 }
 @Post('brands')
@@ -53,32 +53,23 @@ create(@Body() payload: CreateBrandDto) {
   //      message: 'accion de crear en el Brand',
   //      payload
   //}
-  return this.brandservidce.create(payload);
+  return this.brandService.create(payload);
 }
 
-@Put('brands/:brandId')
-update(@Param('brandId') brandId: number, @Body() payload: UpdateBrandDto) {
+@Put('brands/:id')
+update(@Param('id') id: number, @Body() payload: UpdateBrandDto) {
 
   //return {
   //      brandId,
   //      message: 'accion de modificación, en el modulo brand',
   //      payload
-  return this.brandservidce.update(+id, payload)
-
-
-
+  return this.update(+ id, payload)
   }
-}
 
-@Delete('brands/:brandId')
+@Delete('brands/:id')
 Delete(@Param('id') id: number) {
 
-  return {
-        id,
-        message: 'accion de borrado, en el modulo brand'
-
-  }
-
+  return 'Brand Eliminada ' + this.brandService.delete(+id);
+ }
 }
 
-}

@@ -5,23 +5,31 @@ import { Controller,
          Post,
          Body,
          Delete,
-         Put } from '@nestjs/common';
-
+         Put,
+         HttpStatus,
+         HttpCode,
+/*ParseIntPipe, este es el propio de nest*/
+} from '@nestjs/common';
+/* 1.- ParseIntPipe (esto se coloca en el servidico y en el controlador*/
 /**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
+/* 2.- Entity (esto se coloca en el servicio)*/
+/* 3.- DTOs (esto se coloca en el controlador y en el servicio)*/
+import { CreateCustomerDto, UpdateCustomerDto } from 'src/dtos/customers.dtos';
+/* 4.- Controler */
+/* 5.- Servicio */
+import { CustomersService } from 'src/services/costumers/costumers.service';
 
 @Controller('customers')
 export class CustomersController {
+    constructor(private customerService: CustomersService) {
+       }
 
-// primera forma de envio del get
-@Get('customers/:customerId')
-getcustomers(@Param() params: any) {
-  return `customer estoy en el getcustomers ${params.customerId}`;
-}
 // segunda forma de envio del get
 @Get('customerss/:customerId')
-getcustomerss(@Param('customerId') customerId: string) {
-  return `customero estoy getcustomerss ${customerId}`;
+@HttpCode(HttpStatus.ACCEPTED)
+getcustomerss(@Param('customerId', ParseIntPipe) customerId: number) {
+  return this.customerService.findOne(customerId);
 }
 
 // usos del decorador query
@@ -31,43 +39,31 @@ getcustomers02(
   @Query('offset') offset = 0,
   @Query('customer') customer: string,
 ) {
-  return `customers: limit => ${limit} offset=> ${offset} customer=> ${customer}`;
+  //return `customers: limit => ${limit} offset=> ${offset} customer=> ${customer}`;
+  return this.customerService.findAll();
 }
-
 
 @Post('customers')
-create(@Body() payload: any) {
+create(@Body() payload: CreateCustomerDto) {
 
-  return {
-        message: 'accion de crear en el customers',
-        payload
-  }
-}
-
-
-@Put('customers/:customerId')
-update(@Param('customerId') customerId: number, @Body() payload: any) {
-
-  return {
-        customerId,
-        message: 'accion de modificación, en el modulo customer',
-        payload
-  }
-}
-
-@Delete('customers/:customerId')
-Delete(@Param('customerId') customerId: number) {
-
-  return {
-        customerId,
-        message: 'accion de borrado, en el modulo customer'
-
+  //return {
+  //      message: 'accion de crear en el customers',
+  //      payload
+  return this.customerService.create(payload);
   }
 
+@Put('customers/:id')
+update(@Param('id') id: number, @Body() payload: UpdateCustomerDto) {
+
+  return this.update(+ id, payload)
+  }
+
+
+@Delete('customers/:id')
+Delete(@Param('id') id: number) {
+
+  return  'Customer Eliminado' + this.customerService.delete(+id);
+
 }
-
-
-
-
 
 }
