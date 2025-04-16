@@ -33,7 +33,7 @@ getCategory(@Param('productId', ParseIntPipe) productId: number, @Param('id', Pa
   return this.categoriesService.findOne(productId)
 }
 
-@Post('categorie')
+@Post('categories')
 create(@Body() payload: CreateCategoryDto) {
 
   /*return {
@@ -44,14 +44,15 @@ create(@Body() payload: CreateCategoryDto) {
 }
 
 @Put('categories/:categorieId')
-update(@Param('categorieId') categorieId: number, @Body() payload: any) {
+update(@Param('categorieId') categorieId: number, @Body() payload: UpdateCategoryDto) {
 
-  return {
+  /*return {
         categorieId,
         message: 'accion de modificación, en el modulo categorie',
-        payload
+        payload*/
+  return this.update(+ categorieId, payload)
   }
-}
+
 
 @Delete('categories/:categorieId')
 Delete(@Param('categorieId') categorieId: number) {
@@ -61,7 +62,9 @@ Delete(@Param('categorieId') categorieId: number) {
         message: 'accion de borrado, en el modulo categorie'
 
   }*/
-   return 'Categoria Eliminada ' + this.categoriesService.delete(+id)
+   return 'Categoria Eliminada ' + this.categoriesService.delete(+categorieId)
+
+}
 
 }
 

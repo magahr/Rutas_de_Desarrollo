@@ -4,19 +4,31 @@ import { Controller,
          Param,
          Put,
          Delete,
+         HttpStatus,
+         HttpCode,
          Body } from '@nestjs/common';
 
+/* 1.- ParseIntPipe (esto se coloca en el servidico y en el controlador*/
 /**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
-
+/* 2.- Entity (esto se coloca en el servicio)*/
+/* 3.- DTOs (esto se coloca en el controlador y en el servicio)*/
+import { CreateUserDto, UpdateUserDto } from 'src/dtos/users.dtos';
+/* 4.- Controler */
+/* 5.- Servicio */
+import { UsersService } from 'src/services/users/users.service';
 
 @Controller('users')
 export class UsersController {
 
+  constructor(private userService: UsersService) {
+      }
+
 // primera forma de envio del get
 @Get('users/:userId')
-getusers(@Param() params: any) {
-  return `user estoy en el getusers ${params.userId}`;
+@HttpCode(HttpStatus.ACCEPTED)
+getusers(@Param('userId', ParseIntPipe) userId: string) {
+  return this.userService.findOne(userId);
 }
 // segunda forma de envio del get
 @Get('userss/:userId')
