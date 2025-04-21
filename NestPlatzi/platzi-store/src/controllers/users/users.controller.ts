@@ -21,14 +21,14 @@ import { UsersService } from 'src/services/users/users.service';
 @Controller('users')
 export class UsersController {
 
-  constructor(private userService: UsersService) {
+  constructor(private usersService: UsersService) {
       }
 
 // primera forma de envio del get
 @Get('users/:userId')
 @HttpCode(HttpStatus.ACCEPTED)
 getusers(@Param('userId', ParseIntPipe) userId: string) {
-  return this.userService.findOne(userId);
+  return this.usersService.findOne(userId);
 }
 // segunda forma de envio del get
 @Get('userss/:userId')

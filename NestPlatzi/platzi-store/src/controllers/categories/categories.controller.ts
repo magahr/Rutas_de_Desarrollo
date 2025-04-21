@@ -1,4 +1,5 @@
 import { Controller,
+  Query,
   Get,
   Param,
   Post,
@@ -31,6 +32,16 @@ getCategory(@Param('productId', ParseIntPipe) productId: number, @Param('id', Pa
   //return `product ${productId} and categoria ${id}`;
   //verificar aqui como buscar los dos juntos id del producto mas el id de categoria
   return this.categoriesService.findOne(productId)
+}
+// usos del decorador query
+@Get('categories')
+getbrands02(
+  @Query('limit') limit = 100,
+  @Query('offset') offset = 0,
+  @Query('brand') brand: string,
+) {
+  //return `brands: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
+   return this.categoriesService.findAll();
 }
 
 @Post('categories')

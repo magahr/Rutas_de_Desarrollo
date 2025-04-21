@@ -13,7 +13,7 @@ import { Controller,
 from '@nestjs/common';
 /* 1.- ParseIntPipe (esto se coloca en el servidico y en el controlador*/
 /**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
-import { ParseIntPipe, ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
+import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 /* 2.- Entity (esto se coloca en el servicio)*/
 /* 3.- DTOs (esto se coloca en el controlador y en el servicio)*/
 import { CreateOrderDto, UpdateOrderDto } from 'src/dtos/orders.dtos';

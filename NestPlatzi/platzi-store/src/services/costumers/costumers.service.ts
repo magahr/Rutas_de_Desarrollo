@@ -5,6 +5,7 @@ import { CreateCustomerDto, UpdateCustomerDto } from 'src/dtos/customers.dtos';
 @Injectable()
 export class CustomersService {
   private counterId = 1;
+
   private costumers: Customer[] = [
       { id: 1,
         name: 'Name 1',
@@ -28,9 +29,9 @@ export class CustomersService {
           console.log("este es un consolog ", payload)
           this.counterId = this.counterId + 1;
           const newCustomer = {
-              id: this.counterId,
-              ...payload,
-          };
+            id: this.counterId,
+            ...payload,
+        };
           this.costumers.push(newCustomer);
           return newCustomer;
       }

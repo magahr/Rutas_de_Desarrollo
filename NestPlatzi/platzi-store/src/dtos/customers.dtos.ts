@@ -8,7 +8,7 @@ export class CreateCustomerDto {
   readonly name: string;
   @IsString()
   @IsNotEmpty()
-  readonly description: string;
+  readonly lastname: string;
 
 }
 /*Con PartialType extiende la misma validaciones de CreateCustomerDto*/
