@@ -3,6 +3,7 @@ import { Controller,
          Query,
          Param,
          Put,
+         Post,
          Delete,
          HttpStatus,
          HttpCode,
@@ -27,13 +28,14 @@ export class UsersController {
 // primera forma de envio del get
 @Get('users/:userId')
 @HttpCode(HttpStatus.ACCEPTED)
-getusers(@Param('userId', ParseIntPipe) userId: string) {
+getusers(@Param('userId', ParseIntPipe) userId: number) {
   return this.usersService.findOne(userId);
 }
 // segunda forma de envio del get
-@Get('userss/:userId')
-getuserss(@Param('userId') userId: string) {
-  return `usero estoy getuserss ${userId}`;
+@Get('users/:userId')
+getuserss(@Param('userId') userId: number) {
+  //return `usero estoy getuserss ${userId}`;
+  return this.usersService.findOne(userId);
 }
 
 // usos del decorador query
@@ -43,30 +45,39 @@ getusers02(
   @Query('offset') offset = 0,
   @Query('user') user: string,
 ) {
-  return `users: limit => ${limit} offset=> ${offset} user=> ${user}`;
+  //return `users: limit => ${limit} offset=> ${offset} user=> ${user}`;
+  return this.usersService.findAll();
+}
+
+@Post('users')
+create(@Body() payload: CreateUserDto) {
+
+  //return {
+  //      message: 'accion de crear en el Brand',
+  //      payload
+  //}
+  return this.usersService.create(payload);
 }
 
 @Put('users/:userId')
-update(@Param('userId') userId: number, @Body() payload: any) {
+update(@Param('userId') userId: number, @Body() payload: UpdateUserDto) {
 
-  return {
+  /*return {
         userId,
         message: 'accion de modificación, en el modulo user',
         payload
-  }
+  }*/
+  return this.update(+userId, payload)
 }
 
-@Delete('userS/:userId')
+@Delete('users/:userId')
 Delete(@Param('userId') userId: number) {
 
-  return {
+  /*return {
         userId,
         message: 'accion de borrado, en el modulo user'
 
-  }
-
+  }*/
+   return ' User Eliminada ' + this.usersService.delete(+ userId);
 }
-
-
-
 }

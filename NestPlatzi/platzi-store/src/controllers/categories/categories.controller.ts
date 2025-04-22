@@ -35,12 +35,12 @@ getCategory(@Param('productId', ParseIntPipe) productId: number, @Param('id', Pa
 }
 // usos del decorador query
 @Get('categories')
-getbrands02(
+getcategories02(
   @Query('limit') limit = 100,
   @Query('offset') offset = 0,
-  @Query('brand') brand: string,
+  @Query('category') category: string,
 ) {
-  //return `brands: limit => ${limit} offset=> ${offset} brand=> ${brand}`;
+  //return `categorys: limit => ${limit} offset=> ${offset} category> ${category}`;
    return this.categoriesService.findAll();
 }
 
