@@ -9,17 +9,12 @@ export class CreateUserDto {
   @IsString()
   @IsNotEmpty()
   readonly description: string;
-  @IsNumber()
+
+  @IsString()
   @IsNotEmpty()
-  @IsPositive()
-  @IsNegative()
-  readonly price: number;
-  @IsNumber()
-  @IsNotEmpty()
-  readonly stock: number
-  @IsUrl()
-  @IsNotEmpty()
-  readonly image: string;
+  readonly lastname: string;
+
+
 }
 /*Con PartialType extiende la misma validaciones de CreateUserDto*/
 export class UpdateUserDto extends PartialType(CreateUserDto) {

@@ -18,11 +18,11 @@ import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 import { CreateCustomerDto, UpdateCustomerDto } from 'src/dtos/customers.dtos';
 /* 4.- Controler */
 /* 5.- Servicio */
-import { CustomersService } from 'src/services/costumers/costumers.service';
+import { CostumersService } from 'src/services/costumers/costumers.service';
 
 @Controller('customers')
 export class CustomersController {
-    constructor(private customerService: CustomersService) {
+    constructor(private customerService: CostumersService) {
        }
 
 // segunda forma de envio del get

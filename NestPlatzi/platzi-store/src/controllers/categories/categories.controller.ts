@@ -28,7 +28,7 @@ export class CategoriesController {
 // Buscar en una categoria especifica un producto especifico
 @Get('categories/:id/products/:productId')
 @HttpCode(HttpStatus.ACCEPTED)
-getCategory(@Param('productId', ParseIntPipe) productId: number, @Param('id', ParseIntPipe), id: number) {
+getCategory(@Param('productId', ParseIntPipe) productId: number, @Param('id', ParseIntPipe) id: number) {
   //return `product ${productId} and categoria ${id}`;
   //verificar aqui como buscar los dos juntos id del producto mas el id de categoria
   return this.categoriesService.findOne(productId)
@@ -67,29 +67,7 @@ update(@Param('categorieId') categorieId: number, @Body() payload: UpdateCategor
 
 @Delete('categories/:categorieId')
 Delete(@Param('categorieId') categorieId: number) {
-
-  /*return {
-        categorieId,
-        message: 'accion de borrado, en el modulo categorie'
-
-  }*/
    return 'Categoria Eliminada ' + this.categoriesService.delete(+categorieId)
+  }
 
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-

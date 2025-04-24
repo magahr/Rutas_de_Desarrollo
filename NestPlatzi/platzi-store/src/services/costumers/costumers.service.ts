@@ -3,7 +3,7 @@ import { Customer } from '../../entities/customer.entity'
 import { CreateCustomerDto, UpdateCustomerDto } from 'src/dtos/customers.dtos';
 
 @Injectable()
-export class CustomersService {
+export class CostumersService {
   private counterId = 1;
 
   private costumers: Customer[] = [
