@@ -116,6 +116,10 @@ git commit -m "16-04-2025 Updating user, controler and servive. this is not fini
 git commit -m "21-04-2025 Updating user, controler and servive. this is not finished"
 git commit -m "22-04-2025 Updating user, controler and servive finished but i have to test"
 
+git commit -m "24-04-2025 I am testing user, controler and servive finished but i have to test"
+
+git commit -m "25-04-2025 I tested the decorator POST in allitems"
+
 
 
 
