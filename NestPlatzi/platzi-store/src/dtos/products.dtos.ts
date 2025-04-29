@@ -12,12 +12,12 @@ export class CreateProductDto {
   @IsNumber()
   @IsNotEmpty()
   @IsPositive()
-  @IsNegative()
+
   readonly price: number;
   @IsNumber()
   @IsNotEmpty()
   readonly stock: number
-  @IsUrl()
+
   @IsNotEmpty()
   readonly image: string;
 }
