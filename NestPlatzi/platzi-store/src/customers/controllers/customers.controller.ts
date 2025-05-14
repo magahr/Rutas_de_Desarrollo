@@ -15,10 +15,10 @@ import { Controller,
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 /* 2.- Entity (esto se coloca en el servicio)*/
 /* 3.- DTOs (esto se coloca en el controlador y en el servicio)*/
-import { CreateCustomerDto, UpdateCustomerDto } from 'src/dtos/customers.dtos';
+import { CreateCustomerDto, UpdateCustomerDto } from 'src/customers/dtos/customers.dtos';
 /* 4.- Controler */
 /* 5.- Servicio */
-import { CostumersService } from 'src/services/costumers/costumers.service';
+import { CostumersService } from 'src/customers/services/costumers.service';
 
 @Controller('customers')
 export class CustomersController {
