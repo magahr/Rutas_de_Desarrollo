@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Order } from '../../customers/entities/order.entity'
-import { CreateOrderDto, UpdateOrderDto } from 'src/customers/dtos/orders.dtos';
+//import { CreateOrderDto, UpdateOrderDto } from 'src/customers/dtos/orders.dtos';
+import { CreateOrderDto, UpdateOrderDto } from '../dtos/orders.dtos';
 @Injectable()
 export class OrdersService {
   private counterId = 1;

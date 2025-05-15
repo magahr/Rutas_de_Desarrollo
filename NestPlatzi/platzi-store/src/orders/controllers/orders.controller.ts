@@ -16,7 +16,7 @@ from '@nestjs/common';
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 /* 2.- Entity (esto se coloca en el servicio)*/
 /* 3.- DTOs (esto se coloca en el controlador y en el servicio)*/
-import { CreateOrderDto, UpdateOrderDto } from 'src/customers/dtos/orders.dtos';
+import { CreateOrderDto, UpdateOrderDto } from '../dtos/orders.dtos';
 /* 4.- Controler */
 /* 5.- Servicio */
 import { OrdersService } from 'src/orders/services/orders.service';

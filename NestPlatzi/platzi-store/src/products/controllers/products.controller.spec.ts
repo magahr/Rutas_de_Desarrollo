@@ -1,6 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ProductsController } from '../../NestPlatzi/platzi-store/src/controllers/products/products.controller';
-
+import { ProductsController } from './products.controller';
 describe('ProductsController', () => {
   let controller: ProductsController;
 

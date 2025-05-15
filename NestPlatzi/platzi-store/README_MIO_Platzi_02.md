@@ -128,6 +128,8 @@ npm run start:dev
 git commit -m "05-05-2025 finish course"
 git commit -m "14-05-2025 refactur the project with the new course, class 2. I did product, categories and user"
 
+git commit -m "15-05-2025 refactur the project with the new course, class 3. I did product, categories and user, but i have to move brands to products"
+
 
 
 

@@ -14,10 +14,10 @@ import { Controller,
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
 /* 2.- Entity (esto se coloca en el servicio)*/
 /* 3.- DTOs (esto se coloca en el controlador y en el servicio)*/
-import { CreateCategoryDto, UpdateCategoryDto } from 'src/dtos/categories.dtos';
+import { CreateCategoryDto, UpdateCategoryDto } from '../dtos/categories.dtos';
 /* 4.- Controler */
 /* 5.- Servicio */
-import { CategoriesService } from 'src/services/categories/categories.service';
+import { CategoriesService } from '../services/categories.service';
 
 @Controller('categories')
 export class CategoriesController {
