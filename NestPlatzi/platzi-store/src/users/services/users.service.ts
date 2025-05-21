@@ -23,6 +23,8 @@ export class UsersService {
         return user;
     }
 
+
+
     create(payload: CreateUserDto) {
         console.log("Console log en User ", payload)
               this.counterId = this.counterId + 1;
@@ -56,5 +58,10 @@ export class UsersService {
                }
                return null;
               }
+
+  getOderByUser(){
+       const user = this.findOne(id);
+
+  }
 }
 

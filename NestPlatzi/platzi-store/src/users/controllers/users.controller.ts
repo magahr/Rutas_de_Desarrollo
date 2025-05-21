@@ -38,6 +38,14 @@ getuserss(@Param('userId') userId: number) {
   return this.usersService.findOne(userId);
 }
 
+/**inicio esto es para la integracion con el modulo users */
+@Get('users/:userId/orders')
+getOrders(@Param('userId', ParseIntPipe) userId: number) {
+  //return `usero estoy getuserss ${userId}`;
+  return this.usersService.findOne(userId);
+}
+/**fin  esto es para la integracion con el modulo users */
+
 // usos del decorador query
 @Get('users')
 getusers02(
