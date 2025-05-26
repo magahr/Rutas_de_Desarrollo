@@ -15,7 +15,7 @@ export class ProductsService {
         stock: 12,
     }];
     findAll() {
-       return this.products
+       return this.products;
     }
 
     findOne(id: number) {

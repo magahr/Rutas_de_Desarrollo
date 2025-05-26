@@ -9,6 +9,8 @@ import { Controller,
          HttpCode,
          Body } from '@nestjs/common';
 
+//import { Injectable, NotFoundException} from '@nestjs/common';
+
 /* 1.- ParseIntPipe (esto se coloca en el servidico y en el controlador*/
 /**Esto se hizo a mano no es de Nest ver carpeta parse-int*/
 import { ParseIntPipe } from 'src/common/parse-int/parse-int.pipe';
@@ -18,6 +20,7 @@ import { CreateUserDto, UpdateUserDto } from '../dtos/users.dtos';
 /* 4.- Controler */
 /* 5.- Servicio */
 import { UsersService } from '../services/users.service';
+
 
 @Controller('users')
 export class UsersController {
@@ -42,7 +45,7 @@ getuserss(@Param('userId') userId: number) {
 @Get('users/:userId/orders')
 getOrders(@Param('userId', ParseIntPipe) userId: number) {
   //return `usero estoy getuserss ${userId}`;
-  return this.usersService.findOne(userId);
+  return this.usersService.getOderByUser(userId);
 }
 /**fin  esto es para la integracion con el modulo users */
 
@@ -88,4 +91,7 @@ Delete(@Param('userId') userId: number) {
   }*/
    return ' User Eliminada ' + this.usersService.delete(+ userId);
 }
+
+
+
 }
