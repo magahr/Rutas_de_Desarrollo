@@ -101,3 +101,5 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 control de versiones:
 
 git commit -m "09-06-2025 - feat: Primer commit del proyecto Bookstore API con NestJS y interfaces"
+
+git commit -m "11-06-2025 - feat: Uptading the proyect. Testing with Imsonia"
